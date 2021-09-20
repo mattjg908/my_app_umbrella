@@ -9,6 +9,8 @@
 # move said applications out of the umbrella.
 use Mix.Config
 
+config :my_app, ecto_repos: [Core.Repo]
+
 # Check my_app_umbrella/.env and my_app_umbrella/docker-compose.yml for values
 config :core, Core.Repo,
   # POSTGRES_DB does not exist, only created dev and test so far
