@@ -28,6 +28,7 @@ services:
             - "4101:4101"
         # we share the entire app with the container, but the libs
         volumes:
+            # Should match where you put the COPY in the Dockerfile
             - ".:/app"
         # the container will not start if the postgres container isn't running
         depends_on:

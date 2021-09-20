@@ -1,6 +1,7 @@
 FROM bitwalker/alpine-elixir-phoenix as builder
 
-COPY . .
+COPY . /app
+WORKDIR /app
 
 RUN mix do deps.get, deps.compile
 
