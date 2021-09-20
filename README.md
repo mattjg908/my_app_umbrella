@@ -1,9 +1,6 @@
 # MyApp.Umbrella
 Taken from several sources, then modified slightly to be simpler and work with
-more modern Phoenix / Elixir conventions:
-- https://medium.com/@cedric_paumard/how-to-build-multiple-web-apps-with-elixir-thanks-to-umbrella-part-2-set-up-the-project-800d6d731dbd
-- https://pentacent.medium.com/getting-started-with-elixir-docker-982e2a16213c
-- https://cloud.google.com/community/tutorials/elixir-phoenix-on-kubernetes-google-container-engine
+more modern Phoenix / Elixir conventions, [medium](https://medium.com/@cedric_paumard/how-to-build-multiple-web-apps-with-elixir-thanks-to-umbrella-part-2-set-up-the-project-800d6d731dbd), [pentacent](https://pentacent.medium.com/getting-started-with-elixir-docker-982e2a16213c), [cloud.google](https://cloud.google.com/community/tutorials/elixir-phoenix-on-kubernetes-google-container-engine).
 
 - install Docker, docker-compose
 - `docker build -t my_app_umbrella:0.1.0` .
