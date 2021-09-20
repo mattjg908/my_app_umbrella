@@ -1,7 +1,8 @@
 use Mix.Config
 
 config :my_app_web, MyAppWeb.Endpoint,
-  http: [port: 4000],
+  # Should match docker-compose.yml
+  http: [port: 4001],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,

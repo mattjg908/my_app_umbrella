@@ -21,7 +21,11 @@ services:
         # build use a path to a Dockerfile
         build: .
         ports:
+            # These will match the Phoenix app configs in config/dev.exs and
+            # config/test.exs. The default ports when generating a Phoenix app
+            # are 4000 and 4002 respectively. Update your configs as needed.
             - "4001:4001"
+            - "4101:4101"
         # we share the entire app with the container, but the libs
         volumes:
             - ".:/app"
