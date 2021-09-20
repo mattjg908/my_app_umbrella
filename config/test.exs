@@ -7,11 +7,11 @@ config :my_app_web, MyAppWeb.Endpoint,
   http: [port: 4101],
   server: false
 
-config :core, Core.Repo,
-  database: "core_repo_test",
-  username: "user",
-  password: "pass",
-  hostname: "localhost"
+# Obviously in a real app dev, test and prod wouldn't have the same username,
+# password, etc.
+#
+# Check my_app_umbrella/.env and my_app_umbrella/docker-compose.yml for values
+config :core, Core.Repo, database: System.get_env("POSTGRES_DB_TEST")
 
 # Print only warnings and errors during test
 config :logger, level: :warn

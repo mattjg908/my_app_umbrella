@@ -19,4 +19,7 @@
     - verify that you see the two new databases via running \l
     - \q
   - docker-compose stop
-
+- docker-compose build
+- docker-compose up -d postgres
+- docker-compose up elixir
+- Visit http://localhost:4001/

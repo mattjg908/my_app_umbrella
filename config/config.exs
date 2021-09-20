@@ -9,13 +9,13 @@
 # move said applications out of the umbrella.
 use Mix.Config
 
+# Check my_app_umbrella/.env and my_app_umbrella/docker-compose.yml for values
 config :core, Core.Repo,
-  database: "core_repo",
-  username: "user",
-  password: "pass",
-  hostname: "localhost"
-
-
+  # POSTGRES_DB does not exist, only created dev and test so far
+  database: System.get_env("POSTGRES_DB"),
+  username: System.get_env("POSTGRES_USER"),
+  password: System.get_env("POSTGRES_PASSWORD"),
+  hostname: System.get_env("POSTGRES_HOST")
 
 config :my_app_web,
   generators: [context_app: :my_app]
